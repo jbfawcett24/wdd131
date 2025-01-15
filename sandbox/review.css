@@ -1,4 +1,46 @@
 * {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.brand { 
+    background-color:cornflowerblue ;
+    display: grid;
+    grid-template-columns: 4em auto;
+    align-items: center;
+}
+
+.brand > h1 {
+    grid-column: 2/3;
+    margin: auto 0;
+    padding-left: 5px;
+    align-content: center;
+    background-color: cornflowerblue;
+    height: 100%;
+}
+
+.brand > span{
+    width: 100%;
+    font-size: 4em;
+    margin: 0 auto;
+    padding-left: 5px;
+    overflow: hidden;
+}
+
+.brand span:hover {
+    background-color: aquamarine;
+}
+
+.post-summary {
+    display: grid;
+    grid-template-columns: 415px 1fr;
+}
+
+.post-summary img {
+    grid-column: 1/2;
+    padding-right: 15px;
+}
+
+.post-summary div {
+    grid-column: 2/3;
 }
