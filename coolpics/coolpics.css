@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+* {
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header, footer {
+    background-color: #141052;
+    color: white;
+}
+h1, h2, h3, button {
+    font-family: Mooli, Arial;
+}
+h1 {
+    padding-top: 20px;
+    font-size: 2.7em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+nav {
+    padding-bottom: 15px;
+}
+button {
+    margin: auto;
+    display: block;
+    color: white;
+    background-color: inherit;
+    border: none;
+    font-size: 0.9em;
+    padding-bottom: 10px;
+}
+a {
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 0.75em;
+    padding-bottom: 5px;
+}
+main {
+    background-color: #D3D3D3;
+}
+h3 {
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.gallery img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: solid white 5px;
+    box-shadow: 10px 5px 5px black;
+}
+footer p {
+    padding-left: 25%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.75em;
+}
+
+.hide {
+    display: none;
+}
+
+.viewer {
+    display: grid;
+    grid-template-rows: 5% 1fr;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+.viewer button {
+    margin: 0;
+    padding: 0;
+    align-self: start;
+    justify-self: end;
+    margin-right: 20px;
+    margin-top: 5px;
+    height: 5%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    grid-row: 1/2;
+}
+.viewer img {
+    align-self: center;
+    max-height: 100%;
+    grid-row: 2/3;
+    max-width: 100%;
+}
+@media screen and (min-width: 700px){
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #button {
+        display: none;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    a {
+        display: inline;
+    }
+
+    .viewer {
+        top: 20%;
+        left:20%;
+        bottom: 20%;
+        right:20%;
+        max-height: 70%;
+    }
+    .viewer img {
+        justify-self: center;
+        padding-bottom: 20px;
+    }
+}
