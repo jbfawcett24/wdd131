@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
     <title>Credit Card</title>
 </head>
 <body>
@@ -17,26 +18,27 @@
                 height="55px">
             <p>
             <label for="number">Card Number</label>
-            <input type="text" name="number" id="number" placeholder="XXXX-XXXX-XXXX-XXXX">
+            <input type="text" name="number" id="number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
             </p>
             <p>
             <label for="name">Card Holder</label>
-            <input type="text" name="name" id="name" placeholder="John Doe">
+            <input type="text" name="name" id="name" placeholder="John Doe" required>
             </p>
             <p id="exp-p">
             <label for="expiration">Expiration</label>
-            <input type="text" name="month" id="expiration" placeholder="MM">
-            <input type="text" name="year" id="expiration-year" placeholder="YY">
+            <input type="text" name="month" id="expiration" placeholder="MM" required>
+            <input type="text" name="year" id="expiration-year" placeholder="YY" required>
             </p>
         </div>
         <div class="back">
             <div class="bar"></div>
             <p>
                 <label for="cvv">CVC/ CVV</label>
-                <input type="text" name="cvv" id="cvv" placeholder="xxx">
+                <input type="text" name="cvv" id="cvv" placeholder="xxx" required>
             </p>
         </div>
         <button type="submit">Submit</button>
     </form>
+    <p class="errorMsg"></p>
 </body>
 </html>
